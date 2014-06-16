@@ -31,7 +31,5 @@ Possible invocations:
 - Import the 'pifacenetctl' module, instantiate the class, and
 			call the 'run' method and let it loop for you
 - Use the daemon:
-'''
-        'python -m pifacenetctl start'
-'''
+  * python -m pifacenetctl start
 
