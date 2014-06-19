@@ -1,5 +1,5 @@
 pkgname=python2-pifacenetctl
-pkgver=0.2.0
+pkgver=0.2.1
 pkgrel=1
 pkgdesc="Raspberry Pi and PiFace headless network manager"
 url="https://github.com/shblythe/python2-pifacenetctl"
@@ -13,7 +13,7 @@ source=(
 )
 md5sums=(
          '9acf9521677398e4f86907e696530f72'
-         '2b86662f85a1a41086d0c806c3d3ab5c'
+         '404235e49c0a1e24e357d6f6c2bff455'
 )
 
 build() {
