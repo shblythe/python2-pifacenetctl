@@ -73,7 +73,7 @@ class PiFaceNetctl:
         self.stdin_path='/dev/null'
         self.stdout_path='/dev/null'
         self.stderr_path='/dev/null'
-        self.pidfile_path='/var/run/pisaac-headless-ip.pid'
+        self.pidfile_path='/var/run/pifacenetctl.pid'
         self.pidfile_timeout=5
         self.pfd=None
         self.state=self._STATE_NO_IP
