@@ -1,0 +1,30 @@
+pkgname=python2-pifacenetctl
+pkgver=0.2.0
+pkgrel=1
+pkgdesc="Raspberry Pi and PiFace headless network manager"
+url="https://github.com/shblythe/python2-pifacenetctl"
+depends=('python2' )
+makedepends=('python2-distribute' )
+license=('GPL v3')
+arch=('any')
+source=(
+        'pifacenetctl.service'
+        "https://pypi.python.org/packages/source/p/pifacenetctl/pifacenetctl-$pkgver.zip"
+)
+md5sums=(
+         '9acf9521677398e4f86907e696530f72'
+         '2b86662f85a1a41086d0c806c3d3ab5c'
+)
+
+build() {
+    cd $srcdir/pifacenetctl-$pkgver
+    python2 setup.py build
+}
+
+package() {
+    cd $srcdir
+    install -m 755 -d "$pkgdir/usr/lib/systemd/system"
+    install -m 644 -t "$pkgdir/usr/lib/systemd/system" pifacenetctl.service
+    cd pifacenetctl-$pkgver
+    python2 setup.py install --root="$pkgdir" --optimize=1 
+}
